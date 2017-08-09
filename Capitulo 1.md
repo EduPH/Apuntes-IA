@@ -30,6 +30,6 @@ Lo que es racional depende de cuatro elementos:
 Con esto podemos definir lo que es un **agente racional**:
 > Para cada posible percepción secuencial, un agente racional debe elegir una acción que maximice su medida de actuación, basándose en la evidencia dada por su percepción y cualquier conocimiento que el agente tenga.
 
-[Índice](https://github.com/EduPH/Apuntes-IA/blob/master/README.md)[Siguiente](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%202.md)
+[Índice](https://github.com/EduPH/Apuntes-IA/blob/master/README.md)  [Siguiente](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%202.md)
 
 
