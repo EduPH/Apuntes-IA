@@ -1,6 +1,6 @@
 ## Capítulo 2: Resolviendo problemas mediante búsqueda
 
-[Anterior](~/Dropbox/Inteligencia artificial/Apuntes/Capitulo 1.md)
+[Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%201.md)
 
 > En este capítulo introducimos herramientas para que un agente encuentre una secuencia de acciones que lo lleven a alcanzar su objetivo.
 
@@ -159,3 +159,5 @@ de las configuraciones el tipo de dato tupla.
             l[pos_hueco-1] = 0
         return tuple(l)
 ```
+
+[Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%201.md)

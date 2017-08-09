@@ -8,3 +8,9 @@ Las prácticas asociadas al código del curso se están solucionando en el sigui
 ## Inteligencia Artificial
 
 La inteligencia artificial intenta entender y construir agentes inteligentes. 
+
+### Índice
+
+1. [Capítulo 1](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%201.md)
+2. [Capítulo 2](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%202.md)
+
