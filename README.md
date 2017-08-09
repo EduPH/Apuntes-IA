@@ -11,6 +11,6 @@ La inteligencia artificial intenta entender y construir agentes inteligentes.
 
 ### Índice
 
-1. [Capítulo 1](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%201.md)
-2. [Capítulo 2](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%202.md)
+1. [Capítulo 1](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%201.md) : En el que se introducen los agentes.
+2. [Capítulo 2](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%202.md) : En el que hablamos sobre los problemas como espacio de estados.
 
