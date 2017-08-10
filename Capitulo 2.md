@@ -24,7 +24,7 @@ indivisible, sin estructura interna.
 
 + [Algoritmos de búsqueda](#algoritmos-de-búsqueda)
 
-  - [Estrategias de búsqueda uniforme](#estrategias-de-búsqueda-uniforme) 
+	- [Estrategias de búsqueda uniforme](#estrategias-de-búsqueda-uniforme) 
 
 
 
