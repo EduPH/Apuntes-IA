@@ -17,8 +17,8 @@ indivisible, sin estructura interna.
   - [Problema de las jarras](#problema-de-las-jarras)
 + [Espacio de estados como un
   grafo](#espacio-de-estados-como-un-grafo)
-+ [Buscando soluciones](#Buscando soluciones)
-+ [Algoritmos de búsqueda](algoritmos-de-búsqueda)
++ [Buscando soluciones](#buscando-soluciones)
++ [Algoritmos de búsqueda](algoritmos-de-busqueda)
   - [Estrategias de búsqueda uniforme](#estrategias-de-busqueda-uniforme) 
 
 
