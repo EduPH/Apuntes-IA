@@ -160,4 +160,82 @@ de las configuraciones el tipo de dato tupla.
         return tuple(l)
 ```
 
+
+#### Problema de las jarras
+
+Hagamos una descripción del problema según los parámetros establecidos
+con anterioridad:
+
+1. **Estado inicial**: Dos jarras vacías. Una de 4 litros y otra de
+   3 litros.
+2. **Acciones**: 
+   + Llenar jarra de 4 litros.
+   + Llenar jarra de 3 litros.
+   + Verter contenido de jarra de 4 litros en la de 3 litros.
+   + Verter contenido de jarra de 3 litros en la de 3 litros.
+   + Vaciar jarra de 3 litros.
+   + Vaciar jarra de 4 litros.
+3. **Modelo de transición**: Cantidad restante en cada jarra tras
+   llevar a cabo una de las acciones.
+4. **Test final**: Que en la jarra de 4 litros tengamos 2 litros.
+5. **Coste**: Se fija como uno por acción.
+
+Así, podemos implementarla en la clase Problema:
+
+```
+	 """Problema de las jarras:
+    Representaremos los estados como tuplas (x,y) de dos números enteros,
+    donde x es el número de litros de la jarra de 4 e y es el número de litros
+    de la jarra de 3"""
+
+    def __init__(self):
+        self.estado_inicial = (0,0)
+
+    def acciones(self,estado):
+        jarra_de_4=estado[0]
+        jarra_de_3=estado[1]
+        accs=list()
+        if jarra_de_4 > 0:
+            accs.append("vaciar jarra de 4")
+            if jarra_de_3 < 3:
+                accs.append("trasvasar de jarra de 4 a jarra de 3")
+        if jarra_de_4 < 4:
+            accs.append("llenar jarra de 4")
+            if jarra_de_3 > 0:
+                accs.append("trasvasar de jarra de 3 a jarra de 4")
+        if jarra_de_3 > 0:
+            accs.append("vaciar jarra de 3")
+        if jarra_de_3 < 3:
+            accs.append("llenar jarra de 3")
+        return accs
+
+    def aplica(self,estado,accion):
+        j4=estado[0]
+        j3=estado[1]
+        if accion=="llenar jarra de 4":
+            return (4,j3)
+        elif accion=="llenar jarra de 3":
+            return (j4,3)
+        elif accion=="vaciar jarra de 4":
+            return (0,j3)
+        elif accion=="vaciar jarra de 3":
+            return (j4,0)
+        elif accion=="trasvasar de jarra de 4 a jarra de 3":
+            return (j4-3+j3,3) if j3+j4 >= 3 else (0,j3+j4)
+        else: #  "trasvasar de jarra de 3 a jarra de 4"
+            return (j3+j4,0) if j3+j4 <= 4 else (4,j3-4+j4)
+
+    def es_estado_final(self,estado):
+        return estado[0]==2
+```
+
+
+### Espacio de estados como un grafo
+
+Un espacio de estados se puede ver como un grafo dirigido, veamos la
+idea intuitiva ilustrando los ejemplos anteriores. 
+
+
 [Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%201.md)
+
+
