@@ -1,10 +1,16 @@
-## Capítulo 2: Resolviendo problemas mediante búsqueda
+# Capítulo 2: Resolviendo problemas mediante búsqueda
 
 [Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%201.md)
 
 > En este capítulo introducimos herramientas para que un agente encuentre una secuencia de acciones que lo lleven a alcanzar su objetivo.
 
-### Tabla de contenidos
+Necesitamos introducir los *problem-solving
+agent*, es decir, agentes que resuelven problemas. Éstos usan
+representaciones atómicas, cada estado del mundo ambiente se considera
+indivisible, sin estructura interna.
+
+
+## Tabla de contenidos
 
 + [Problema como espacio de estados](#problema-como-espacio-de-estados)
   - [Problema del 8-puzzle](#8-puzzle)
@@ -15,12 +21,9 @@
 + [Algoritmos de búsqueda](algoritmos-de-búsqueda)
   - [Estrategias de búsqueda uniforme](#estrategias-de-busqueda-uniforme) 
 
-Necesitamos introducir los *problem-solving
-agent*, es decir, agentes que resuelven problemas. Éstos usan
-representaciones atómicas, cada estado del mundo ambiente se considera
-indivisible, sin estructura interna.
 
-### Problema como espacio de estados
+
+## Problema como espacio de estados
 
 La primera característica indispensable es fijar un *objetivo* para
 poder, en función a lo que se quiere alcanzar, **formular el
@@ -90,7 +93,7 @@ estados, y así, cada problema heredará las propiedades.
         return 1
 ```
 
-#### 8 puzzle
+### 8 puzzle
 
 El problema del 8-puzzle se trata de una tabla de valores como la siguiente:
 
@@ -172,7 +175,7 @@ de las configuraciones el tipo de dato tupla.
 ```
 
 
-#### Problema de las jarras
+### Problema de las jarras
 
 Hagamos una descripción del problema según los parámetros establecidos
 con anterioridad:
@@ -241,12 +244,12 @@ Así, podemos implementarla en la clase Problema:
 ```
 
 
-### Espacio de estados como un grafo
+## Espacio de estados como un grafo
 
 Un espacio de estados se puede ver como un grafo dirigido, veamos la
 idea intuitiva ilustrando los ejemplos anteriores. 
 
-### Buscando soluciones
+## Buscando soluciones
 
 Una *solución* es una secuencia de acciones, y un *algoritmo de
 búsqueda* funciona considerando distintas secuencias de acciones
@@ -270,11 +273,15 @@ de memoria.
 
 Teniendo en cuenta esto, comentemos distintos algoritmos de búsqueda:
 
-#### Algoritmos de búsqueda
+### Algoritmos de búsqueda
 
 
-##### Estrategias de búsqueda uniforme
+#### Estrategias de búsqueda uniforme
 
+##### Búsqueda en anchura
+
+
+##### Búsqueda en profundidad
 
 
 

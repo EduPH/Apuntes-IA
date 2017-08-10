@@ -1,5 +1,5 @@
 
-## Capítulo 1: Agentes inteligentes
+# Capítulo 1: Agentes inteligentes
 
 
 El primer elemento interesante que necesitamos distinguir y definir son los agentes. Un *agente* percibe el ambiente a través de **sensores** 
@@ -13,7 +13,7 @@ por la secuencia de percepción, llevándolo a actuar de una determinada manera.
 
 Hemos caracterizado un agente genérico, y ahora debemos calificar su comportamiento.
 
-### Buen comportamiento: Racionalidad
+## Buen comportamiento: Racionalidad
 
 Un agente racional es aquel que actúa de manera adecuada, ampliémos este concepto. Hemos dicho que cuando un agente actúa lo hace sobre el ambiente que
 lo rodea, y eso implica que lo modifica. Cuando el efecto sobre el ambiente es el deseado, entonces se ha comportado correctamente. La forma
