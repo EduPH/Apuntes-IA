@@ -13,12 +13,17 @@ indivisible, sin estructura interna.
 ## Tabla de contenidos
 
 + [Problema como espacio de estados](#problema-como-espacio-de-estados)
+
   - [Problema del 8-puzzle](#8-puzzle)
   - [Problema de las jarras](#problema-de-las-jarras)
+  
 + [Espacio de estados como un
   grafo](#espacio-de-estados-como-un-grafo)
+  
 + [Buscando soluciones](#buscando-soluciones)
+
 + [Algoritmos de búsqueda](#algoritmos-de-búsqueda)
+
   - [Estrategias de búsqueda uniforme](#estrategias-de-búsqueda-uniforme) 
 
 
