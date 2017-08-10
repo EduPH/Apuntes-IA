@@ -5,6 +5,9 @@ En este repositorio se elaboran apuntes basados en el libro [Artificial Intellig
 
 Las prácticas asociadas al código del curso se están solucionando en el siguiente [repositorio](https://github.com/EduPH/IA-Practicas).
 
+
+**Estado de los apuntes**: en proceso. 
+
 ## Inteligencia Artificial
 
 La inteligencia artificial intenta entender y construir agentes inteligentes. 
