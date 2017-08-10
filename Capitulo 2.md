@@ -4,6 +4,17 @@
 
 > En este capítulo introducimos herramientas para que un agente encuentre una secuencia de acciones que lo lleven a alcanzar su objetivo.
 
+### Tabla de contenidos
+
++ [Problema como espacio de estados](#problema-como-espacio-de-estados)
+  - [Problema del 8-puzzle](#8-puzzle)
+  - [Problema de las jarras](#problema-de-las-jarras)
++ [Espacio de estados como un
+  grafo](#espacio-de-estados-como-un-grafo)
++ [Buscando soluciones](#Buscando soluciones)
++ [Algoritmos de búsqueda](algoritmos-de-búsqueda)
+  - [Estrategias de búsqueda uniforme](#estrategias-de-busqueda-uniforme) 
+
 Necesitamos introducir los *problem-solving
 agent*, es decir, agentes que resuelven problemas. Éstos usan
 representaciones atómicas, cada estado del mundo ambiente se considera
@@ -234,6 +245,42 @@ Así, podemos implementarla en la clase Problema:
 
 Un espacio de estados se puede ver como un grafo dirigido, veamos la
 idea intuitiva ilustrando los ejemplos anteriores. 
+
+### Buscando soluciones
+
+Una *solución* es una secuencia de acciones, y un *algoritmo de
+búsqueda* funciona considerando distintas secuencias de acciones
+posibles. Dichas secuencias generan árboles de búsqueda con el estado
+inicial en la raíz, basándonos en la interpretación como grafos dada
+antes. 
+
+> Es importante tener en cuenta que pueden generarse bucles en nuestra
+> búsqueda. Por ejemplo, en el caso del 8-puzzle, se pueden repetir
+> estados al ser posible revertir las acciones.  
+
+
+Podemos evaluar la actuación de un algoritmo de cuatro maneras:
+
++ **Completitud**: mide si el algoritmo garantiza encontrar una solución.
++ **Optimalidad**: mide si el algoritmo encuentra el mejor resultado.
++ **Complejidad temporal**: mide lo que tarda el algoritmo en
+encontrar una solución.
++ **Complejidad de espacio**: mide el coste del algoritmo en términos
+de memoria. 
+
+Teniendo en cuenta esto, comentemos distintos algoritmos de búsqueda:
+
+#### Algoritmos de búsqueda
+
+
+##### Estrategias de búsqueda uniforme
+
+
+
+
+
+
+
 
 
 [Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%201.md)
