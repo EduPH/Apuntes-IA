@@ -18,8 +18,8 @@ indivisible, sin estructura interna.
 + [Espacio de estados como un
   grafo](#espacio-de-estados-como-un-grafo)
 + [Buscando soluciones](#buscando-soluciones)
-+ [Algoritmos de búsqueda](algoritmos-de-busqueda)
-  - [Estrategias de búsqueda uniforme](#estrategias-de-busqueda-uniforme) 
++ [Algoritmos de búsqueda](#algoritmos-de-búsqueda)
+  - [Estrategias de búsqueda uniforme](#estrategias-de-búsqueda-uniforme) 
 
 
 
