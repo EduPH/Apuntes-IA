@@ -299,9 +299,13 @@ En este algoritmo se expande primero la raíz y luego los de
 profundidad siguiente, iterando dicha expansión ordenada por
 nivel. Además, no se baja en profundidad hasta que todos los de un
 determinado nivel están expandidos. Se comprueba si hemos alcanzado el
-objetivos tras cada expansión de nodo.
+objetivos tras cada expansión de nodo. En la siguiente
+[imagen](https://commons.wikimedia.org/wiki/File:Breadth-first-tree.svg)
+podemos entender cómo funciona de manera intuitiva. 
+
 
 ![image](https://upload.wikimedia.org/wikipedia/commons/3/33/Breadth-first-tree.svg)
+
 
 
 Es un algoritmo que resulta ser óptimo si el coste es una función no
