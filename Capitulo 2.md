@@ -24,7 +24,7 @@ indivisible, sin estructura interna.
 
 + [Algoritmos de búsqueda](#algoritmos-de-búsqueda)
 
-	- [Estrategias de búsqueda uniforme](#estrategias-de-búsqueda-uniforme) 
+	- [Estrategias de búsqueda uniforme](#estrategias-de-búsqueda-desinformada) 
 
 
 
@@ -281,7 +281,17 @@ Teniendo en cuenta esto, comentemos distintos algoritmos de búsqueda:
 ### Algoritmos de búsqueda
 
 
-#### Estrategias de búsqueda uniforme
+#### Estrategias de búsqueda desinformada
+
+Se trata de algoritmos que no son capaces de distinguir si una vía va
+a ser más prometedora que otra, si no que simplemente expanden nodos
+siguiendo un cierto orden establecido, comprobando si han alcanzado su
+meta. 
+
+> Cuando decimos que se expande un nodo, en dicho nodo se describe un
+> estado, y los distintos nodos sucesores que se generan al expandir
+> son aquellos resultados de las distintas acciones posibles.
+
 
 ##### Búsqueda en anchura
 
@@ -310,7 +320,7 @@ una tabla del libro que usamos de referencia obtenemos lo siguiente:
 1. La memoria es un problema mayor que el tiempo de ejecución.
    > Para ciertos problemas, el tiempo de ejecución podría ser
    >abordable, pero no existen ordenadores con capacidad suficiente.
-2. Problemas de busqueda de complejidad exponencial no pueden ser
+2. Problemas de búsqueda de complejidad exponencial no pueden ser
    resueltos por métodos uniformes a no ser que sean los de menor
    tamaño. 
 
