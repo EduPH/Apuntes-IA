@@ -285,6 +285,34 @@ Teniendo en cuenta esto, comentemos distintos algoritmos de búsqueda:
 
 ##### Búsqueda en anchura
 
+En este algoritmo se expande primero la raíz y luego los de
+profundidad siguiente, iterando dicha expansión ordenada por
+nivel. Además, no se baja en profundidad hasta que todos los de un
+determinado nivel están expandidos. Se comprueba si hemos alcanzado el
+objetivos tras cada expansión de nodo.
+
+Es un algoritmo que resulta ser óptimo si el coste es una función no
+decreciente a lo largo de la profundidad. Por ejemplo, cuando todas
+las acciones tienen el mismo coste (el caso del 8-puzzle y las
+jarras).
+
+Es interesante estudiar su complejidad y para ello veamos el número de
+operaciones necesarias si la solución se alcanzara a profundidad d y,
+en el peor de los casos, en el último nodo de dicha
+profundidad. Además, consideremos que el número de acciones por nodo
+es b, apareciendo, por lo tanto, b nodos por expansión. 
+
+$b+b^2+b^3+ ... + b^d = O(b^d)$
+
+es decir, hablamos de una complejidad exponencial. Además, visionando
+una tabla del libro que usamos de referencia obtenemos lo siguiente:
+
+1. La memoria es un problema mayor que el tiempo de ejecución.
+   > Para ciertos problemas, el tiempo de ejecución podría ser
+   >abordable, pero no existen ordenadores con capacidad suficiente.
+2. Problemas de busqueda de complejidad exponencial no pueden ser
+   resueltos por métodos uniformes a no ser que sean los de menor
+   tamaño. 
 
 ##### Búsqueda en profundidad
 
