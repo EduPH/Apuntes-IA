@@ -254,6 +254,85 @@ Así, podemos implementarla en la clase Problema:
 Un espacio de estados se puede ver como un grafo dirigido, veamos la
 idea intuitiva ilustrando los ejemplos anteriores. 
 
+```
+	class Nodo:
+    """Nodos de un árbol de búsqueda. Un nodo se define como:
+       - Un estado
+       - Un puntero al estado desde el que viene (padre)
+       - La acción que se ha aplicado al padre para que se obtenga el
+         estado del nodo
+       - Profundidad del nodo
+       - Coste del camino desde el estado inicial hasta el nodo.
+       
+       Definimos además, entre otros, los siguientes métodos que se
+       necesitarán para generar el aŕbol de búsqueda: 
+       - Sucesor y sucesores de un nodo (respesctivamente por una acción 
+         o por todas las acciones aplicables al estado del nodo). Estos
+         métodos reciben como entrada un  problema de espacio de estados.  
+       - Camino (secuencia de nodos) que lleva del estado inicial al estado del
+         nodo.
+       - Solución (secuencia de acciones que llevan al estado) de un nodo.   
+       """  
+
+    def __init__(self, estado, padre=None, accion=None, coste_camino=0):
+        self.estado=estado
+        self.padre=padre
+        self.accion=accion
+        self.coste_camino=coste_camino
+        self.profundidad=0
+        if padre: 
+            self.profundidad= padre.profundidad + 1
+
+    def __repr__(self):
+        return "<Nodo {0}>".format(self.estado)
+
+    def sucesor(self, problema, accion):
+        """Sucesor de un nodo por una acción aplicable"""
+        estado_suc = problema.aplica(self.estado, accion)
+        return Nodo(estado_suc, self, accion,
+                    problema.coste_de_aplicar_accion(self.estado,accion)+self.coste_camino)
+
+    def sucesores(self, problema):
+        """Lista de los nodos sucesores por todas las acciones que le sean
+           aplicables""" 
+        return [self.sucesor(problema, accion)
+                for accion in problema.acciones(self.estado)]
+
+    def camino(self):
+        """Lista de nodos que forman el camino desde el inicial hasta el
+           nodo.""" 
+        nodo_aux, camino_inverso = self, []
+        while nodo_aux:
+            camino_inverso.append(nodo_aux)
+            nodo_aux = nodo_aux.padre
+        return list(reversed(camino_inverso))
+
+    def solucion(self):
+        """Secuencia de acciones desde el nodo inicial"""
+        return [nodo.accion for nodo in self.camino()[1:]]
+
+    def __eq__(self, other):
+        """ Dos nodos son iguales si sus estados son iguales. Esto significa que
+        cuando comprobemos pertenecia a una lista o a un conjunto (con"in"), sólo
+        miramos los estados. Si hay que nirar, por ejemplo, algo del coste,
+        habrá que hacerlo expresamente, como se hará en la
+        buśqueda_con_prioridad"""
+        
+        return isinstance(other, Nodo) and self.estado == other.estado
+
+    def __lt__(self, other): 
+        """La definición del menor entre nodos se necesita porque cuando se
+        introduce un nodo en la cola de prioridad, con la misma valoración que
+        uno ya existente, se van a comparar los nodos y por tanto es necesario que
+        esté definido el operador <"""  
+        return True
+    
+    def __hash__(self):
+        """Nótese que esta definición obliga a que los estados sean de un tipo
+        de dato hashable"""
+        return hash(self.estado)  
+```                     
+
 ## Buscando soluciones
 
 Una *solución* es una secuencia de acciones, y un *algoritmo de
@@ -279,6 +358,32 @@ de memoria.
 Teniendo en cuenta esto, comentemos distintos algoritmos de búsqueda:
 
 ### Algoritmos de búsqueda
+
+```
+	def busqueda_generica(problema, abiertos):
+    """Búsqueda genérica, tal y como se ha visto en clase; aquí
+    abiertos es una cola que se puede gestionar de varias maneras. 
+    Cuando se llama a la función, el argumento abiertos debe ser la cola
+    vacía. 
+    Téngase en cuenta que en esta búsqueda, para ver si se repite un nodo,
+    sólo se mira el estado. Por tanto, las búsquedas que usan coste (coste uniforme o
+    A*, por ejemplo), no se pueden obtener como caso particular de ésta (serán
+    casos particulares de búsqueda_con_prioridad)"""
+
+
+    abiertos.append(Nodo(problema.estado_inicial))
+    cerrados = set()
+    while abiertos:
+        actual = abiertos.pop()
+        if problema.es_estado_final(actual.estado):
+            return actual
+        cerrados.add(actual.estado)
+        nuevos_sucesores=(sucesor for sucesor in actual.sucesores(problema)
+                          if sucesor.estado not in cerrados
+                          and sucesor not in abiertos)
+        abiertos.extend(nuevos_sucesores)
+    return None
+```
 
 
 #### Estrategias de búsqueda desinformada
