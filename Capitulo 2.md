@@ -302,8 +302,9 @@ en el peor de los casos, en el último nodo de dicha
 profundidad. Además, consideremos que el número de acciones por nodo
 es b, apareciendo, por lo tanto, b nodos por expansión. 
 
-$b+b^2+b^3+ ... + b^d = O(b^d)$
-
+\begin{equation}
+b+b^2+b^3+ ... + b^d = O(b^d)
+\end{equation}
 es decir, hablamos de una complejidad exponencial. Además, visionando
 una tabla del libro que usamos de referencia obtenemos lo siguiente:
 
