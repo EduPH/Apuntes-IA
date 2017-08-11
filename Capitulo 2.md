@@ -301,6 +301,9 @@ nivel. Además, no se baja en profundidad hasta que todos los de un
 determinado nivel están expandidos. Se comprueba si hemos alcanzado el
 objetivos tras cada expansión de nodo.
 
+![image](https://upload.wikimedia.org/wikipedia/commons/3/33/Breadth-first-tree.svg)
+
+
 Es un algoritmo que resulta ser óptimo si el coste es una función no
 decreciente a lo largo de la profundidad. Por ejemplo, cuando todas
 las acciones tienen el mismo coste (el caso del 8-puzzle y las
@@ -312,7 +315,9 @@ en el peor de los casos, en el último nodo de dicha
 profundidad. Además, consideremos que el número de acciones por nodo
 es b, apareciendo, por lo tanto, b nodos por expansión. 
 
+
 ![equation](http://latex.codecogs.com/gif.latex?%5Cfn_cm%20%5Clarge%20b&plus;b%5E2&plus;b%5E3&plus;%20...%20&plus;%20b%5Ed%20%3D%20O%28b%5Ed%29)  
+
 
 es decir, hablamos de una complejidad exponencial. Además, visionando
 una tabla del libro que usamos de referencia obtenemos lo siguiente:
