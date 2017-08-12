@@ -23,7 +23,8 @@ indivisible, sin estructura interna.
 
 + [Algoritmos de búsqueda](#algoritmos-de-búsqueda)
 	- [Estrategias de búsqueda desinformada](#estrategias-de-búsqueda-desinformada) 
-
+	  * [Búsqueda en anchura](#busqueda-en-anchura)
+	  * [Búsqueda en profundidad](#busqueda-en-profundidad)
 
 
 ## Problema como espacio de estados
@@ -510,7 +511,18 @@ Su implementación en Python empleando la búsqueda genérica antes dada:
 
 ##### Búsqueda en profundidad
 
+Este algoritmo expande siempre el nodo a mayor profundidad, y si hay
+varios a misma profundidad, los hace siguiendo un orden. Lo
+entenderemos en el siguiente [esquema](https://commons.wikimedia.org/wiki/File:Depth-first-tree.svg):
 
+![image](https://upload.wikimedia.org/wikipedia/commons/1/1f/Depth-first-tree.svg)
+
+
+
+Su implementación en Python: 
+
+	def busqueda_en_profundidad(problema):
+		return busqueda_generica(problema, PilaLIFO())
 
 
 
