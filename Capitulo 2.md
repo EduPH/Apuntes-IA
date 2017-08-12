@@ -13,7 +13,6 @@ indivisible, sin estructura interna.
 ## Tabla de contenidos
 
 + [Problema como espacio de estados](#problema-como-espacio-de-estados)
-
   - [Problema del 8-puzzle](#8-puzzle)
   - [Problema de las jarras](#problema-de-las-jarras)
   
@@ -23,7 +22,6 @@ indivisible, sin estructura interna.
 + [Buscando soluciones](#buscando-soluciones)
 
 + [Algoritmos de búsqueda](#algoritmos-de-búsqueda)
-
 	- [Estrategias de búsqueda desinformada](#estrategias-de-búsqueda-desinformada) 
 
 
@@ -122,7 +120,12 @@ Esta sería una descripción informal del problema, desgranemos los
 elementos definidos en la sección anterior.
 
 1. **Estado inicial**: Una configuración como la antes dada.
-2. **Acciones**: Intercambiar hueco por número adyacente.
+2. **Acciones**: Intercambiar hueco por número adyacente. En
+   particular
+	   + Mover hueco arriba.
+	   + Mover hueco abajo.
+	   + Mover hueco izquierda.
+	   + Mover hueco derecha.
 3. **Modelo de transición**: Configuración resultado de realizar la
    acción.
 4. **Test final**: Comprobación de que la configuración corresponde
@@ -251,8 +254,10 @@ Así, podemos implementarla en la clase Problema:
 
 ## Espacio de estados como un grafo
 
-Un espacio de estados se puede ver como un grafo dirigido, veamos la
-idea intuitiva ilustrando los ejemplos anteriores. 
+Un espacio de estados se puede ver como un grafo dirigido. La raíz es
+el estado inicial, y dicho nodo raíz se expande siendo sus sucesores
+los estados resultantes de aplicar cada acción posible. En python
+implementamos los árboles de búsqueda de la siguiente manera:
 
 ```
 	class Nodo:
@@ -331,7 +336,57 @@ idea intuitiva ilustrando los ejemplos anteriores.
         """Nótese que esta definición obliga a que los estados sean de un tipo
         de dato hashable"""
         return hash(self.estado)  
-```                     
+``` 
+
+En el caso del 8-puzzle, si partimos de la siguiente configuración
+inicial:
+
+	 p8p_1 = Ocho_Puzzle((2, 8, 3, 1, 6, 4, 7, 0, 5))
+
+2 | 8 | 3
+--- | --- | ---
+1 | 6 | 4
+7 |  | 5
+
+
+Entonces tenemos tres acciones posibles. Podemos mover el hueco
+arriba, derecha e izquierda. Y el resultado de ejecutar cada una de
+las acciones generará un nodo sucesor. Es decir,
+
+Primer sucesor:
+
+	>>> p8p_1.aplica(p8p_1.estado_inicial, "Mover hueco arriba")
+	(2, 8, 3, 1, 0, 4, 7, 6, 5)
+	
+2 | 8 | 3
+--- | --- | ---
+1 |  | 4
+7 | 6 | 5
+
+
+Segundo sucesor:
+
+	>>> p8p_1.aplica(p8p_1.estado_inicial, "Mover hueco izquierda")
+	(2, 8, 3, 1, 6, 4, 0, 7, 5)
+
+2 | 8 | 3
+--- | --- | ---
+1 | 6 | 4
+ | 7 | 5
+
+
+Tercer sucesor:
+
+	>>> p8p_1.aplica(p8p_1.estado_inicial, "Mover hueco derecha")
+	(2, 8, 3, 1, 6, 4, 7, 5, 0)
+
+2 | 8 | 3
+--- | --- | ---
+1 | 6 | 4
+7 | 5 | 
+
+
+Posteriormente se expandiría a su vez cada nodo generando el árbol. 
 
 ## Buscando soluciones
 
