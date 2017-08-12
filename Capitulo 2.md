@@ -414,6 +414,14 @@ Teniendo en cuenta esto, comentemos distintos algoritmos de búsqueda:
 
 ### Algoritmos de búsqueda
 
+A lo largo de estas implementaciones se emplea código auxiliar sobre
+colas, pilas y colas con prioridad. Se puede visualizar en el
+siguiente [repositorio](https://github.com/EduPH/IA-Practicas), en
+concreto en el documento
+[algoritmos_de_busqueda](https://github.com/EduPH/IA-Practicas/blob/master/algoritmos_de_busqueda.py).
+
+Ahora damos la definición en Python de una búsqueda genérica:
+
 ```
 	def busqueda_generica(problema, abiertos):
     """Búsqueda genérica, tal y como se ha visto en clase; aquí
@@ -494,6 +502,10 @@ una tabla del libro que usamos de referencia obtenemos lo siguiente:
    > Para ciertos problemas, el tiempo de ejecución podría ser
    >abordable, pero no existen ordenadores con capacidad suficiente.
    
+Su implementación en Python empleando la búsqueda genérica antes dada:
+
+	def busqueda_en_anchura(problema):
+		return busqueda_generica(problema, ColaFIFO())
 
 
 ##### Búsqueda en profundidad
