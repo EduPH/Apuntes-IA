@@ -23,8 +23,8 @@ indivisible, sin estructura interna.
 
 + [Algoritmos de búsqueda](#algoritmos-de-búsqueda)
 	- [Estrategias de búsqueda desinformada](#estrategias-de-búsqueda-desinformada) 
-	  * [Búsqueda en anchura](#busqueda-en-anchura)
-	  * [Búsqueda en profundidad](#busqueda-en-profundidad)
+	  * [Búsqueda en anchura](#búsqueda-en-anchura)
+	  * [Búsqueda en profundidad](#búsqueda-en-profundidad)
 
 
 ## Problema como espacio de estados
