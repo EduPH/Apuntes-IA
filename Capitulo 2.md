@@ -487,11 +487,14 @@ es decir, hablamos de una complejidad exponencial. Además, visionando
 una tabla del libro que usamos de referencia obtenemos lo siguiente:
 
 1. La memoria es un problema mayor que el tiempo de ejecución.
-   > Para ciertos problemas, el tiempo de ejecución podría ser
-   >abordable, pero no existen ordenadores con capacidad suficiente.
 2. Problemas de búsqueda de complejidad exponencial no pueden ser
    resueltos por métodos uniformes a no ser que sean los de menor
    tamaño. 
+   
+   > Para ciertos problemas, el tiempo de ejecución podría ser
+   >abordable, pero no existen ordenadores con capacidad suficiente.
+   
+
 
 ##### Búsqueda en profundidad
 
