@@ -581,8 +581,37 @@ def busqueda_con_prioridad(problema, f):
 
 ![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20h%28n%29%20%3D%20%5Ctext%7Bcoste%20estimado%20del%20camino%20con%20menor%20coste%20desde%20el%20estado%20%7D%20n%20%5Ctext%7B%20hasta%20el%20estado%20final%7D)
 
+Existen distintos algoritmos de búsqueda con prioridad. Los
+implementamos en Python:
+
+```
+def busqueda_coste_uniforme(problema):
+    """Busqueda óptima: gestiona la cola en orden creciente de coste del camino"""
+    return busqueda_con_prioridad(problema, lambda x: x.coste_camino)
 
 
+def busqueda_primero_el_mejor(problema, h=None):
+
+    """Búsqueda por primero el mejor: gestionar la cola de menor a mayor
+    heurística.  
+    NOTA: en realidad, al hacer que primero_el_mejor sea un caso
+    particular de búsqueda_con_prioridad, estamos poniendo en este algoritmo
+    un test innecesario. Cuando el estado de un nodo generado es el mismo que
+    el del un nodo que está en abiertos o en cerrados, su valoración (su
+    heurística en este caso) es la misma que el nodo que ya está en la lista,
+    ya que la heurística sólo depende del estado. Sin embargo,
+    búsqueda_con_prioridad comprueba si su valoración es menor o no (en este
+    caso inútilmente). Hemos preferido dejarlo así para enfatizar la
+    estructura común de estos algoritmos"""
+
+    return busqueda_con_prioridad(problema,lambda n: h(n.estado))
+
+
+def busqueda_a_estrella(problema, h=None):
+    """A*: la cola se ordena por f(n) = g(n)+h(n) (coste más heurística)."""
+
+    return busqueda_con_prioridad(problema,lambda n: n.coste_camino + h(n.estado))
+```
 
 
 
