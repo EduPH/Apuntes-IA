@@ -26,7 +26,7 @@ indivisible, sin estructura interna.
 	 	* [Búsqueda en anchura](#búsqueda-en-anchura)
 		 
 	 	* [Búsqueda en profundidad](#búsqueda-en-profundidad)
-
+	- [Heurística en algoritmos de búsqueda informada](#heurística-en-algoritmos-de-búsqueda-informada)
 
 ## Problema como espacio de estados
 
