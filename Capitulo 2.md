@@ -517,7 +517,7 @@ entenderemos en el siguiente [esquema](https://commons.wikimedia.org/wiki/File:D
 
 ![image](https://upload.wikimedia.org/wikipedia/commons/1/1f/Depth-first-tree.svg)
 
-
+Se emplea una cola FIFO[^1]
 
 Su implementación en Python: 
 
@@ -531,4 +531,4 @@ Su implementación en Python:
 
 [Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%201.md)
 
-
+[^1]: Definida en 
