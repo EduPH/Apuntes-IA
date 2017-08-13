@@ -207,6 +207,7 @@ con anterioridad:
 Así, podemos implementarla en la clase Problema:
 
 ```
+class Jarras(Problema):
 	 """Problema de las jarras:
     Representaremos los estados como tuplas (x,y) de dos números enteros,
     donde x es el número de litros de la jarra de 4 e y es el número de litros
@@ -262,7 +263,7 @@ los estados resultantes de aplicar cada acción posible. En python
 implementamos los árboles de búsqueda de la siguiente manera:
 
 ```
-	class Nodo:
+class Nodo:
     """Nodos de un árbol de búsqueda. Un nodo se define como:
        - Un estado
        - Un puntero al estado desde el que viene (padre)
@@ -425,7 +426,7 @@ concreto en el documento
 Ahora damos la definición en Python de una búsqueda genérica:
 
 ```
-	def busqueda_generica(problema, abiertos):
+def busqueda_generica(problema, abiertos):
     """Búsqueda genérica, tal y como se ha visto en clase; aquí
     abiertos es una cola que se puede gestionar de varias maneras. 
     Cuando se llama a la función, el argumento abiertos debe ser la cola
@@ -506,9 +507,10 @@ una tabla del libro que usamos de referencia obtenemos lo siguiente:
    
 Su implementación en Python empleando la búsqueda genérica antes dada:
 
-	def busqueda_en_anchura(problema):
+```
+def busqueda_en_anchura(problema):
 		return busqueda_generica(problema, ColaFIFO())
-
+```
 
 ##### Búsqueda en profundidad
 
@@ -534,18 +536,52 @@ Su implementación en Python:
 > mismo. 
 
 La forma general de abordar un algoritmo de este tipo es a través de
-la llamada **mejor búsqueda primero**, que es una variante del
+la llamada **mejor búsqueda primero** o **búsqueda con prioridad**, que es una variante del
 algoritmo de búsqueda genérico en árboles que antes se introdujo, pero
 empleando una *función de evaluación* ![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20f%28n%29) que está definida como una
 estimación de costes. Así, el nodo con una evaluación menor es el que
 se expande primero y la elección de dicha función de evaluación
 establece la estrategia del algoritmo. 
 
-> Los algoritmos de mejor búsqueda primero suelen tener como
+En Python lo implementamos de la siguiente manera:
+
+```
+def busqueda_con_prioridad(problema, f):
+    """Búsqueda que gestiona la cola de abiertos ordenando los nodos de menor
+    a mayor valor de f. Tanto la búsqueda por primero el mejor, como la
+    búsqueda óptima y la búsqueda A* son casos particulares de esta búsqueda,
+    usando distintas f's (heurística, coste y coste más heurística,
+    respectivamente)."""
+    
+    actual = Nodo(problema.estado_inicial)
+    if problema.es_estado_final(actual.estado):
+        return actual
+    abiertos = ColaPrioridad(min, f)
+    abiertos.append(actual)
+    cerrados = set()
+    while abiertos:
+        actual = abiertos.pop()
+        if problema.es_estado_final(actual.estado):
+            return actual
+        cerrados.add(actual.estado)
+        for sucesor in actual.sucesores(problema):
+            if sucesor.estado not in cerrados and sucesor not in abiertos:
+                abiertos.append(sucesor)
+            elif sucesor in abiertos:
+                nodo_con_mismo_estado = abiertos[sucesor]
+                if f(sucesor) < f(nodo_con_mismo_estado): 
+                    del abiertos[nodo_con_mismo_estado]
+                    abiertos.append(sucesor)
+    return None
+```
+
+> Los algoritmos de *búsqueda con prioridad* suelen tener como
 > componente de la función de evaluación la que se llama **función
 > heurística** ![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20h%28n%29).
 
 ![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20h%28n%29%20%3D%20%5Ctext%7Bcoste%20estimado%20del%20camino%20con%20menor%20coste%20desde%20el%20estado%20%7D%20n%20%5Ctext%7B%20hasta%20el%20estado%20final%7D)
+
+
 
 
 
