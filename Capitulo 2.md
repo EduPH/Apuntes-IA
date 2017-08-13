@@ -518,7 +518,8 @@ entenderemos en el siguiente [esquema](https://commons.wikimedia.org/wiki/File:D
 
 ![image](https://upload.wikimedia.org/wikipedia/commons/1/1f/Depth-first-tree.svg)
 
-Se emplea una cola FIFO[^1]
+Se emplea una cola LIFO mientras que en el algoritmo de búsqueda en
+anchura se empleaba una cola FIFO. 
 
 Su implementación en Python: 
 
@@ -526,10 +527,29 @@ Su implementación en Python:
 		return busqueda_generica(problema, PilaLIFO())
 
 
+#### Heurística en algoritmos de búsqueda informada
+
+> Los **algoritmos de búsqueda informada** tienen más información útil
+> sobre el problema que la que se destila de la formulación del
+> mismo. 
+
+La forma general de abordar un algoritmo de este tipo es a través de
+la llamada **mejor búsqueda primero**, que es una variante del
+algoritmo de búsqueda genérico en árboles que antes se introdujo, pero
+empleando una *función de evaluación* ![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20f%28n%29) que está definida como una
+estimación de costes. Así, el nodo con una evaluación menor es el que
+se expande primero y la elección de dicha función de evaluación
+establece la estrategia del algoritmo. 
+
+> Los algoritmos de mejor búsqueda primero suelen tener como
+> componente de la función de evaluación la que se llama **función
+> heurística** ![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20h%28n%29).
+
+![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20h%28n%29%20%3D%20%5Ctext%7Bcoste%20estimado%20del%20camino%20con%20menor%20coste%20desde%20el%20estado%20%7D%20n%20%5Ctext%7B%20hasta%20el%20estado%20final%7D)
+
+
 
 
 
 
 [Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%201.md)
-
-[^1]: Definida en 
