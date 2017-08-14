@@ -26,6 +26,9 @@ indivisible, sin estructura interna.
 	 	* [Búsqueda en anchura](#búsqueda-en-anchura)
 		 
 	 	* [Búsqueda en profundidad](#búsqueda-en-profundidad)
+		
+		* [Búsqueda de coste uniforme](#búsqueda-de-coste-uniforme)
+		
 	- [Heurística en algoritmos de búsqueda informada](#heurística-en-algoritmos-de-búsqueda-informada)
 
 ## Problema como espacio de estados
@@ -523,10 +526,29 @@ entenderemos en el siguiente [esquema](https://commons.wikimedia.org/wiki/File:D
 Se emplea una cola LIFO mientras que en el algoritmo de búsqueda en
 anchura se empleaba una cola FIFO. 
 
+Presenta estas propiedades:
+
+1. No es completa, es decir, hay casos en los que puede no
+   terminar. Sí es completa para espacios finitos. 
+   
+2. Cuando termina, puede no obtener una solución mínima. 
+
+3. Tiene una complejidad en tiempo y espacio de O(r^m), donde r es el factor de
+   ramificación y m la máxima profundidad de un camino.
+
 Su implementación en Python: 
 
 	def busqueda_en_profundidad(problema):
 		return busqueda_generica(problema, PilaLIFO())
+
+Existen variaciones del algoritmo en profundidad que ayudan a superar
+algunas de sus limitaciones, es el caso de la búsqueda en profundidad
+**acotada** y la búsqueda en profundidad **iterativa**. La primera limita la
+profundidad a la que se busca la solución y la segunda, fijada una
+cota de profundidad, la va aumentando gradualmente. 
+
+##### Búsqueda de coste uniforme
+
 
 
 #### Heurística en algoritmos de búsqueda informada
