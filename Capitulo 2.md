@@ -533,7 +533,7 @@ Presenta estas propiedades:
    
 2. Cuando termina, puede no obtener una solución mínima. 
 
-3. Tiene una complejidad en tiempo y espacio de O(r^m), donde r es el factor de
+3. Tiene una complejidad en tiempo y espacio de ![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20O%28r%5Em%29), donde r es el factor de
    ramificación y m la máxima profundidad de un camino.
 
 Su implementación en Python: 
