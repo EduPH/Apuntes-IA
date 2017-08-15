@@ -27,7 +27,6 @@ indivisible, sin estructura interna.
 		 
 	 	* [Búsqueda en profundidad](#búsqueda-en-profundidad)
 		
-		* [Búsqueda de coste uniforme](#búsqueda-de-coste-uniforme)
 		
 	- [Heurística en algoritmos de búsqueda informada](#heurística-en-algoritmos-de-búsqueda-informada)
 
@@ -546,9 +545,6 @@ algunas de sus limitaciones, es el caso de la búsqueda en profundidad
 **acotada** y la búsqueda en profundidad **iterativa**. La primera limita la
 profundidad a la que se busca la solución y la segunda, fijada una
 cota de profundidad, la va aumentando gradualmente. 
-
-##### Búsqueda de coste uniforme
-
 
 
 #### Heurística en algoritmos de búsqueda informada
