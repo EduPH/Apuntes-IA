@@ -37,6 +37,43 @@ empleará como herramienta la lógica que dará representación a estados,
 acciones y objetivos, y algoritmos que actuarán sobre esa
 representación. 
 
+## PDDL
+
+**PDDL** son las siglas de *Planning Domain Definition Language*, es
+decir, se trata un lenguaje que describirá todos los elementos del
+problema. Nosotros como dijimos antes, usaremos una representación
+basada en la lógica. 
+
+En un problema será necesario describir los distintos *objetos* que
+conformen el mundo. Por ejemplo, si trabajamos en un almacen y tenemos
+una serie de contenedores apilados, cada contenedor será un objeto y
+los representaremos a través de constantes en mayúscula. 
+
+Posteriormente, es sensato describir de alguna manera el *estado
+inicial* de dichas objetos en forma de relaciones o propiedades que se
+establecen entre ellos o con el mundo. En el caso de los contenedores,
+sobre qué contenedor están, debajo de cual, si no tienen ninguno
+debajo o si no tienen ninguno encima. Estas propiedades serán
+representadas por medio de símbolos de predicados. 
+
+Así, ya podemos representar un *estado inicial*, así como el final si
+añadimos *objetos genéricos*, que serán representados por variables. 
+
+Lo que sigue es poder expresar acciones a través de un esquema
+compuesto por:
++ Un predicado que actúa sobre distintos objetos.
++ Una precondición, que define cuándo tiene sentido ejecutar la
+  acción.
++ El resultado al llevar a cabo la acción, es decir, cómo se queda el
+  mundo tras el efecto de la acción. 
+ 
+Finalmente, el *objetivo* será una conjunción de estados. 
+
+### Ejemplo del almacén 
+
+
+
+
 
 [Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%202.md)
 
