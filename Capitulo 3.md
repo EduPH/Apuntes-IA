@@ -50,7 +50,7 @@ una serie de contenedores apilados, cada contenedor será un objeto y
 los representaremos a través de constantes en mayúscula. 
 
 Posteriormente, es sensato describir de alguna manera el *estado
-inicial* de dichas objetos en forma de relaciones o propiedades que se
+inicial* de dichos objetos en forma de relaciones o propiedades que se
 establecen entre ellos o con el mundo. En el caso de los contenedores,
 sobre qué contenedor están, debajo de cual, si no tienen ninguno
 debajo o si no tienen ninguno encima. Estas propiedades serán
@@ -69,9 +69,29 @@ compuesto por:
  
 Finalmente, el *objetivo* será una conjunción de estados. 
 
-### Ejemplo del almacén 
+### Ejemplo de las torres de Hanói
 
+El juego consiste en tres varillas con una cantidad indeterminada de
+discos de distintos radios, nosotros consideraremos siete discos.  
 
+1. Configuración inicial: siete discos situados en la primera varilla
+   ordenados por orden creciente en radio. 
+   
+2. Movimientos posibles, consideramos X el disco al que se aplica la
+   acción. Cada disco tendrá un nombre dado por una constante
+   mayúscula.  
+	   + Mover a la derecha (o izquierda) el disco (X).
+		 - Precondiciones: 
+			* Hay una varilla a la derecha (o izquierda) de la que está situada.
+			* Si existe un disco en la varilla a la que se desplaza,
+             éste es de radio mayor que el de X. 
+			* El disco X se encuentra en la posición más arriba en su
+             varilla. 
+		 - Efecto de la acción:
+		    * El disco X se encuentra ahora en la varilla adyacente
+			correspondiente.  
+3. Objetivo: colocar los siete discos en el mismo orden de la
+   configuración inicial, pero en la tercera varilla. 
 
 
 
