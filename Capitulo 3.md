@@ -95,8 +95,7 @@ discos de distintos radios, nosotros consideraremos siete discos.
 			* El disco X se encuentra en la posición más arriba en su varilla. 
 			
 		 - Efecto de la acción:
-		 
-		    	* El disco X se encuentra ahora en la varilla adyacente correspondiente.  
+		 	* El disco X se encuentra ahora en la varilla adyacente correspondiente.  
 
 4. Objetivo: colocar los siete discos en el mismo orden de la
    configuración inicial, pero en la tercera varilla. 
