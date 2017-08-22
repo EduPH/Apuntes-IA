@@ -86,8 +86,8 @@ discos de distintos radios, nosotros consideraremos siete discos.
    acción. Cada disco tendrá un nombre dado por una constante
    mayúscula.  
    
-	   + Mover a la derecha (o izquierda) el disco (X).
-		 - Precondiciones: 
+	  + Mover a la derecha (o izquierda) el disco (X).
+	 	- Precondiciones: 
 			* Hay una varilla a la derecha (o izquierda) de la que está situada.
 			
 			* Si existe un disco en la varilla a la que se desplaza, éste es de radio mayor que el de X. 
