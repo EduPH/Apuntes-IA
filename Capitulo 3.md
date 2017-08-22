@@ -77,7 +77,12 @@ discos de distintos radios, nosotros consideraremos siete discos.
 1. Configuración inicial: siete discos situados en la primera varilla
    ordenados por orden creciente en radio. 
    
-2. Movimientos posibles, consideramos X el disco al que se aplica la
+2. Predicados de posición: 
+	+ Encima de (X,Y): describe que el disco X está sobre Y, siendo Y
+	 otro disco o el suelo. 
+	+ En varilla (X,n): que el disco X está sobre la varilla n. 
+
+3. Movimientos posibles, consideramos X el disco al que se aplica la
    acción. Cada disco tendrá un nombre dado por una constante
    mayúscula.  
 	   + Mover a la derecha (o izquierda) el disco (X).
@@ -90,11 +95,10 @@ discos de distintos radios, nosotros consideraremos siete discos.
 		 - Efecto de la acción:
 		    * El disco X se encuentra ahora en la varilla adyacente
 			correspondiente.  
-3. Objetivo: colocar los siete discos en el mismo orden de la
+
+4. Objetivo: colocar los siete discos en el mismo orden de la
    configuración inicial, pero en la tercera varilla. 
-
-
-
+ 
 [Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%202.md)
 
 
