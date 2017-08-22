@@ -85,16 +85,18 @@ discos de distintos radios, nosotros consideraremos siete discos.
 3. Movimientos posibles, consideramos X el disco al que se aplica la
    acción. Cada disco tendrá un nombre dado por una constante
    mayúscula.  
+   
 	   + Mover a la derecha (o izquierda) el disco (X).
 		 - Precondiciones: 
 			* Hay una varilla a la derecha (o izquierda) de la que está situada.
-			* Si existe un disco en la varilla a la que se desplaza,
-             éste es de radio mayor que el de X. 
-			* El disco X se encuentra en la posición más arriba en su
-             varilla. 
+			
+			* Si existe un disco en la varilla a la que se desplaza, éste es de radio mayor que el de X. 
+			
+			* El disco X se encuentra en la posición más arriba en su varilla. 
+			
 		 - Efecto de la acción:
-		    * El disco X se encuentra ahora en la varilla adyacente
-			correspondiente.  
+		 
+		    	* El disco X se encuentra ahora en la varilla adyacente correspondiente.  
 
 4. Objetivo: colocar los siete discos en el mismo orden de la
    configuración inicial, pero en la tercera varilla. 
