@@ -90,7 +90,7 @@ discos de distintos radios, nosotros consideraremos siete discos.
 	 	- Precondiciones: 
 			* Hay una varilla a la derecha (o izquierda) de la que está situada.
 			
-			* Si existe un disco en la varilla a la que se desplaza, éste es de radio mayor que el de X. 
+	   		* Si existe un disco en la varilla a la que se desplaza, éste es de radio mayor que el de X. 
 			
 			* El disco X se encuentra en la posición más arriba en su varilla. 
 			
@@ -99,7 +99,29 @@ discos de distintos radios, nosotros consideraremos siete discos.
 
 4. Objetivo: colocar los siete discos en el mismo orden de la
    configuración inicial, pero en la tercera varilla. 
- 
+
+```
+Init(Encima_de(A,B)∧Encima_de(B,C)∧Encima_de(C,D)∧Encima_de(D,E)∧Encima_de(F,G)∧Encima_de(G,Mesa)∧En_Varilla_1(A,B,C,D,E,F,G))
+Goal(Encima_de(A,B)∧Encima_de(B,C)∧Encima_de(C,D)∧Encima_de(D,E)∧Encima_de(F,G)∧Encima_de(G,Mesa)∧En_Varilla_3(A,B,C,D,E,F,G))
+Action(Mover_derecha(a),
+	Precond: ¬(En_Varilla_3(a))	¬(Encima_de(b,a)∧libre_derecha(a)),
+	Effect: Encima_de(a,x)∧(En_Varilla_(n+1)(a))
+``` 
+
+Hemos hecho un intento de formalización, no sería del todo correcto
+pero es un acercamiento más que aceptable.
+
++ ```Encima_de(a,b)``` determina si a está encima de b.
+
++ ```En_Varilla_n(a)``` determina si a está en la varilla n.
+
++ ``` Libre_derecha(a)``` determina si en la varilla de la derecha hay
+  un disco mayor que a encima del todo. 
+  
+Faltaría escribir la acción ```Mover_izquierda(a)```pero es análoga a
+  la descrita.   
+  
+
 [Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%202.md)
 
 
