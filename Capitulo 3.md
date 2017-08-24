@@ -119,7 +119,61 @@ pero es un acercamiento más que aceptable.
   un disco mayor que a encima del todo. 
   
 Faltaría escribir la acción ```Mover_izquierda(a)```pero es análoga a
-  la descrita.   
+  la descrita.
+  
+### Búsqueda hacia delante
+
+Hemos visto cómo un problema de planificación se puede plantear como
+un problema de espacio de estados. Con lo visto hasta ahora, no es de
+extrañar que una de las estrategias para la *búsqueda* de planes sean
+algoritmos de búsqueda vistos con anterioridad. Comentemos el
+algoritmo de búsqueda hacia delante en profundidad. 
+
+El **algoritmo de búsqueda hacia delante en profundidad** es un
+algoritmo de tipo *Backtracking*, es decir, se ordenan por heurística
+los sucesores del estado actual. 
+
+*Nota*: Los sucesores son los estados posibles alcanzables desde el
+estado actual. 
+
+Presenta las siguientes propiedades:
+
++ Es completo y siempre termina aunque no garantiza la solución más
+  corta.
++ Tiene una complejidad en tiempo exponencial. 
++ Tiene complejidad en espacio lineal . 
++ Su eficiencia depende de la bondad de la heurística. 
+
+### Búsqueda hacia atrás 
+
+Como alternativa a la búsqueda hacia delante, surge la búsqueda hacia
+atrás. La antes descrita presenta el problema de que si uno no da con
+la heurística adecuada pueden generarse múltiples ramificaciones con
+acciones que no nos acercan al estado objetivo. 
+
+En el caso de la búsqueda hacia atrás, como es predecible, se comienza
+desde el estado objetivo y se aplican acciones inversas pretendiendo
+alcanzar el estado inicial. Las acciones que se irán llevando a cabo
+serán aquellas que sean consideradas relevantes respecto el objetivo. 
+
+Necesitamos describir con mayor detenimiento lo que se considera una
+**acción relevante**:
+
++ Al menos uno de los efectos de la acción está en el objetivo. 
++ Ninguno de los efectos de la acción aparece en el objetivo con
+  distinto signo. 
+  
+Son acciones que podrían parecer ser la última acción de un plan que
+llevara al objetivo. 
+
+
+
+
+
+
+
+
+
   
 
 [Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%202.md)
