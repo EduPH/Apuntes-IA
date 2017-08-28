@@ -118,7 +118,7 @@ pero es un acercamiento más que aceptable.
 + ``` Libre_derecha(a)``` determina si en la varilla de la derecha hay
   un disco mayor que a encima del todo. 
   
-Faltaría escribir la acción ```Mover_izquierda(a)```pero es análoga a
+Faltaría escribir la acción ```Mover_izquierda(a)``` pero es análoga a
   la descrita.
   
 ### Búsqueda hacia delante
@@ -165,15 +165,6 @@ Necesitamos describir con mayor detenimiento lo que se considera una
   
 Son acciones que podrían parecer ser la última acción de un plan que
 llevara al objetivo. 
-
-
-
-
-
-
-
-
-
   
 
 [Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%202.md)
