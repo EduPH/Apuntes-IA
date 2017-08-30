@@ -167,6 +167,15 @@ Son acciones que podrían parecer ser la última acción de un plan que
 llevara al objetivo. 
   
 
+Antes comentamos los sucesores y es normal y necesario hablar de lo
+que se denominan predecesores. El objetivo predecesor de un objetivo **G**
+respecto de una acción **A** será
+![formula](http://latex.codecogs.com/gif.latex?%28G-%5Ctext%7Befectos%7D%28A%29%29%20%5Ccup%20%5Ctext%7Bprecond%7D%28A%29)
+. 
+
+### Heurística para planificación 
+
+
 [Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%202.md)
 
 
