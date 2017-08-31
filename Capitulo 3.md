@@ -144,6 +144,27 @@ Presenta las siguientes propiedades:
 + Tiene complejidad en espacio lineal . 
 + Su eficiencia depende de la bondad de la heurística. 
 
+Presentamos una descripción en pseudocódigo:
+
+```
+FUNCION BUSQUEDA-EN-PROFUNDIDAD-H(ESTADO-INICIAL,OBJETIVO,ACCIONES)
+ Devolver BEP-H-REC({},{},ESTADO-INICIAL,OBJETIVO,ACCIONES)
+
+FUNCION BEP-H-REC(PLAN,VISITADOS,ACTUAL,OBJ,ACCIONES)
+1. Si ACTUAL satisface OBJ, devolver PLAN
+2. Hacer APLICABLES igual a la lista de acciones que sean instancias
+   de una acción de ACCIONES, que sean aplicables a ACTUAL y cuya
+   aplicación no resulte en un estado de VISITADOS
+3. Hacer ORD-APLICABLES igual a ORDENA-POR-HEURISTICA(APLICABLES)
+4. Para cada ACCION en ORD-APLICABLES
+   4.1 Hacer E’ el resultado de aplicar ACCION a ACTUAL
+   4.2 Hacer RES igual a 
+	   BEP-H-REC(PLAN·ACCION,VISITADOS U {E’},E’,OBJ,ACCIONES) 
+   4.3 Si RES no es FALLO, devolver RES y terminar
+5. Devolver FALLO
+```
+
+
 ### Búsqueda hacia atrás 
 
 Como alternativa a la búsqueda hacia delante, surge la búsqueda hacia
@@ -172,6 +193,67 @@ que se denominan predecesores. El objetivo predecesor de un objetivo **G**
 respecto de una acción **A** será
 ![formula](http://latex.codecogs.com/gif.latex?%28G-%5Ctext%7Befectos%7D%28A%29%29%20%5Ccup%20%5Ctext%7Bprecond%7D%28A%29)
 . 
+
+Presentamos una descripción en pseudocódigo:
+
+```
+FUNCION BUSQUEDA-HACIA-ATRÁS-H(ESTADO-INICIAL,OBJ,ACCIONES)
+  Devolver BHA-H-REC({},{},ESTADO-INICIAL,OBJ,ACCIONES)
+
+FUNCION BHA-H-REC(PLAN,VISITADOS,ESTADO-INICIAL,G-ACTUAL,ACCIONES)
+1. Si ESTADO-INICIAL satisface G-ACTUAL, devolver PLAN
+2. Hacer RELEVANTES igual a la lista de acciones que sean instancias
+    de una acción de ACCIONES, que sean relevantes para G-ACTUAL
+    y tal que el predecesor de G-ACTUAL respecto de la acción
+    no sea un objetivo que contiene a alguno de VISITADOS
+3. Hacer RELEVANTES-ORDENADOS
+     igual a ORDENA-POR-HEURISTICA(RELEVANTES)
+4. Para cada ACCION en RELEVANTES-ORDENADOS
+   4.1 Hacer G’ el objetivo predecesor de G-ACTUAL respecto a ACCION
+   4.2 Hacer RES igual a
+	   BHA-H-REC(ACCION·PLAN,VISITADOS U {G’}, ESTADO-INICIAL,G’,ACCIONES)
+   4.4 Si RES no es FALLO, devolver RES y terminar
+5. Devolver FALLO
+```
+
+
+Hasta ahora no hemos introducido variables en este algoritmo de
+búsqueda, pero puede darse (seguramente) que requiramos
+introducirlas. De hecho, a veces es conveniente no instanciar
+completamente, es decir, en vez de dar una lista de acciones
+relevantes de la siguiente manera: ``` ACCION(A1,n), ... ,
+ACCION(Am,n)```, podemos dejar el primer argumento sin especificar, es
+	decir, ```ACCION(x,n)```. Para trabajar con esto, es necesario
+	usar **unificadores de máxima generalidad** quedando el siguiente
+	pseudocódigo: 
+	
+```
+FUNCION BUSQUEDA-HACIA-ATRÁS-H-U(ESTADO-INICIAL,OBJ,ACCIONES)
+  Devolver BHA-H-U-REC({},{},ESTADO-INICIAL,OBJ,ACCIONES)
+
+FUNCION BHA-H-U-REC(PLAN,VISITADOS,ESTADO-INICIAL,G-ACTUAL,ACCIONES)
+1. Si ESTADO-INICIAL satisface G-ACTUAL, devolver PLAN
+2. Hacer RELEVANTES igual a la lista de pares (A,SIGMA) tales que:
+   * A es una acción (estandarizada) de ACCIONES,
+      relevante para ESTADO
+   * SIGMA es umg entre los efectos de A que hacen relevante
+      a la acción respecto de los correspondientes literales
+      de G-ACTUAL
+   * El predecesor de ACTUAL respecto de la acción no es un
+      objetivo con un subconjunto de literales que unifica con
+      alguno de los objetivos VISITADOS
+3. Hacer RELEVANTES-ORDENADOS
+    igual a ORDENA-POR-HEURISTICA(RELEVANTES)
+4. Para cada (A,SIGMA) en RELEVANTES-ORDENADOS
+   4.1 Hacer G’ el objetivo predecesor de G-ACTUAL
+        respecto a (A,SIGMA); es decir,
+        G’=(SIGMA(G-ACTUAL) - Efectos(SIGMA(A)))
+                U Precondiciones(SIGMA(A))
+   4.2 Hacer RES igual a
+	   BHA-H-U-REC((A,SIGMA)·SIGMA(PLAN),VISITADOS U {G’}, ESTADO-INICIAL,G’,ACCIONES)
+   4.3 Si RES no es FALLO, devolver RES y terminar
+5. Devolver FALLO
+```
 
 ### Heurística para planificación 
 
