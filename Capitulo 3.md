@@ -257,6 +257,26 @@ FUNCION BHA-H-U-REC(PLAN,VISITADOS,ESTADO-INICIAL,G-ACTUAL,ACCIONES)
 
 ### Heurística para planificación 
 
+No hemos descrito en ambos algoritmos anteriores (hacia delante y
+hacia atrás) la función que ordenaba por heurística. La heurística se
+convierte en un elemento esencial que determinará la eficiencia de los
+algoritmos. Como vimos en el capítulo anterior, la heurística debe
+estimar la distancia entre estados y objetivos, en nuestro caso ésto
+se cumple tal cual en la búsqueda hacia delante, pero en la búsqueda
+hacia atrás hay que matizar. La heurística en la búsqueda hacia atrás
+mide la distancia desde cada objetivo hacia el estado inicial. Si las
+estimaciones de distancias están por debajo del número de acciones
+real, diremos que la heurística es *admisible*. 
+
+#### Heurística ![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20%5CDelta_0)
+
+A veces nos basamos en problemas relajados, es decir, que simplifican
+el problema para el cálculo de heurísticas. Una de ellas es la
+heurística
+![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20%5CDelta_0)
+que definimos a continuación: 
+
+
 
 [Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%202.md)
 
