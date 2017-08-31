@@ -276,6 +276,18 @@ heurística
 ![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20%5CDelta_0)
 que definimos a continuación: 
 
+![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20%5CDelta_0%28e%2Cp%29%20%3D%20%5Cleft%5Clbrace%20%5Cbegin%7Barray%7D%7Bll%7D%200%20%26%20%5Ctextup%7Bsi%20%7D%20p%20%5Ctextup%7B%20aparece%20en%20%7De.%20%5C%5C%20&plus;%20%5Cinfty%20%26%20%5Ctextup%7Bsi%20%7D%20p%20%5Ctextup%7B%20no%20aparece%20en%20%7De%20%5Ctextup%7B%20ni%20en%20los%20efectos%20positivos%20de%20ninguna%20accion.%7D%20%5C%5C%20min_A%5C%7B%201&plus;%20%5Csum_%7Bq%5Cin%20precond%5E&plus;%28A%29%7D%20%5CDelta_0%28e%2Cq%29%7C%20p%5Cin%20efectos%5E&plus;%28A%29%5C%7D%20%26%20%5Ctextup%7Ben%20otro%20caso.%7D%20%5Cend%7Barray%7D%20%5Cright.)
+
+
+![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20%5CDelta_0%20%28e%2Cg%29%20%3D%20%5Csum_%7Bp%5Cin%20g%7D%20%5CDelta_0%28e%2Cp%29)
+
+
+Donde e es un estado, p es un átomo y g un objetivo que solo tiene
+literales positivos. El superíndice positivo en precond y efectos
+indica literales positivos. 
+
+Así, se están relajando las condiciones del problema, suponiendo que
+no hay precondiciones ni efectos negativas. 
 
 
 [Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%202.md)
