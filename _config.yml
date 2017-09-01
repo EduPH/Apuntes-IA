@@ -1,6 +1,0 @@
-theme: jekyll-theme-slate
-defaults:
-  scope:
-        path: "_posts"
-        type: "posts"
-    
