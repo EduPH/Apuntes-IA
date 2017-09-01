@@ -13,7 +13,7 @@
   - [Búsqueda hacia delante](#busqueda-hacia-delante)
   - [Búsqueda hacia atrás](#busqueda-hacia-atrás)
   - [Heurística para planificación](#heurística-para-planificación)
-	 * [Heurística ![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20%5CDelta_0)](#heurística-![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20%5CDelta_0))
+	 * [Heurística ![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20%5CDelta_0)](#heurística)
 
 
 
@@ -167,8 +167,8 @@ FUNCION BUSQUEDA-EN-PROFUNDIDAD-H(ESTADO-INICIAL,OBJETIVO,ACCIONES)
 FUNCION BEP-H-REC(PLAN,VISITADOS,ACTUAL,OBJ,ACCIONES)
 1. Si ACTUAL satisface OBJ, devolver PLAN
 2. Hacer APLICABLES igual a la lista de acciones que sean instancias
-   de una acción de ACCIONES, que sean aplicables a ACTUAL y cuya
-   aplicación no resulte en un estado de VISITADOS
+   de una acción de ACCIONES, que sean aplicables a ACTUAL y cuya
+   aplicación no resulte en un estado de VISITADOS
 3. Hacer ORD-APLICABLES igual a ORDENA-POR-HEURISTICA(APLICABLES)
 4. Para cada ACCION en ORD-APLICABLES
    4.1 Hacer E’ el resultado de aplicar ACCION a ACTUAL
@@ -211,14 +211,14 @@ respecto de una acción **A** será
 Presentamos una descripción en pseudocódigo:
 
 ```
-FUNCION BUSQUEDA-HACIA-ATRÁS-H(ESTADO-INICIAL,OBJ,ACCIONES)
+FUNCION BUSQUEDA-HACIA-ATRÁS-H(ESTADO-INICIAL,OBJ,ACCIONES)
   Devolver BHA-H-REC({},{},ESTADO-INICIAL,OBJ,ACCIONES)
 
 FUNCION BHA-H-REC(PLAN,VISITADOS,ESTADO-INICIAL,G-ACTUAL,ACCIONES)
 1. Si ESTADO-INICIAL satisface G-ACTUAL, devolver PLAN
 2. Hacer RELEVANTES igual a la lista de acciones que sean instancias
-    de una acción de ACCIONES, que sean relevantes para G-ACTUAL
-    y tal que el predecesor de G-ACTUAL respecto de la acción
+    de una acción de ACCIONES, que sean relevantes para G-ACTUAL
+    y tal que el predecesor de G-ACTUAL respecto de la acción
     no sea un objetivo que contiene a alguno de VISITADOS
 3. Hacer RELEVANTES-ORDENADOS
      igual a ORDENA-POR-HEURISTICA(RELEVANTES)
@@ -242,18 +242,18 @@ ACCION(Am,n)```, podemos dejar el primer argumento sin especificar, es
 	pseudocódigo: 
 	
 ```
-FUNCION BUSQUEDA-HACIA-ATRÁS-H-U(ESTADO-INICIAL,OBJ,ACCIONES)
+FUNCION BUSQUEDA-HACIA-ATRÁS-H-U(ESTADO-INICIAL,OBJ,ACCIONES)
   Devolver BHA-H-U-REC({},{},ESTADO-INICIAL,OBJ,ACCIONES)
 
 FUNCION BHA-H-U-REC(PLAN,VISITADOS,ESTADO-INICIAL,G-ACTUAL,ACCIONES)
 1. Si ESTADO-INICIAL satisface G-ACTUAL, devolver PLAN
 2. Hacer RELEVANTES igual a la lista de pares (A,SIGMA) tales que:
-   * A es una acción (estandarizada) de ACCIONES,
+   * A es una acción (estandarizada) de ACCIONES,
       relevante para ESTADO
    * SIGMA es umg entre los efectos de A que hacen relevante
-      a la acción respecto de los correspondientes literales
+      a la acción respecto de los correspondientes literales
       de G-ACTUAL
-   * El predecesor de ACTUAL respecto de la acción no es un
+   * El predecesor de ACTUAL respecto de la acción no es un
       objetivo con un subconjunto de literales que unifica con
       alguno de los objetivos VISITADOS
 3. Hacer RELEVANTES-ORDENADOS
