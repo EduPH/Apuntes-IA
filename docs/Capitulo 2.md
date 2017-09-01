@@ -1,6 +1,6 @@
 # Capítulo 2: Resolviendo problemas mediante búsqueda
 
-[Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/posts/Capitulo%201.md)  [Siguiente](https://github.com/EduPH/Apuntes-IA/blob/master/posts/Capitulo%203.md)
+[Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/docs/Capitulo%201.md)  [Siguiente](https://github.com/EduPH/Apuntes-IA/blob/master/docs/Capitulo%203.md)
 
 > En este capítulo introducimos herramientas para que un agente encuentre una secuencia de acciones que lo lleven a alcanzar su objetivo.
 
@@ -635,4 +635,4 @@ def busqueda_a_estrella(problema, h=None):
 
 
 
-[Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/posts/Capitulo%201.md)   [Siguiente](https://github.com/EduPH/Apuntes-IA/blob/master/posts/Capitulo%203.md)
+[Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/docs/Capitulo%201.md)   [Siguiente](https://github.com/EduPH/Apuntes-IA/blob/master/docs/Capitulo%203.md)
