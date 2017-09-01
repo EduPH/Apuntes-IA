@@ -1,8 +1,8 @@
 ---
-
-layout: Capitulo1
+layout: post
+title:  "Capítulo 1"
+date:   2017-9-1
 ---
-
 
 # Capítulo 1: Agentes inteligentes
 
