@@ -1,5 +1,5 @@
 ---
-title: Capítulo 1
+
 layout: Capitulo1
 ---
 
