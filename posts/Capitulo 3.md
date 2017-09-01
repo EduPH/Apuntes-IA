@@ -1,7 +1,7 @@
 # Capítulo 3: Planificación
 
 
-[Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%202.md)  [Siguiente](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%204.md)
+[Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/posts/Capitulo%202.md)  [Siguiente](https://github.com/EduPH/Apuntes-IA/blob/master/posts/Capitulo%204.md)
 
 
 

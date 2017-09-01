@@ -1,6 +1,6 @@
 # Capítulo 4: Búsqueda local y algoritmos genéticos
 
-[Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%203.md)
+[Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/posts/Capitulo%203.md)
 
 En este capítulo relajaremos las asumpciones que nos simplificaban los problemas, 
 consiguiendo así un acercamiento a los problemas del mundo real. 
