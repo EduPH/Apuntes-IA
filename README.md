@@ -24,10 +24,3 @@ La inteligencia artificial intenta entender y construir agentes inteligentes.
    En el que hablamos sobre búsqueda local y algoritmos genéticos. 
 
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
