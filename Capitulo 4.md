@@ -30,14 +30,19 @@ De esta manera, la solución será el mínimo en la gráfica si hablábamos de c
 Introduzcamos este tipo de búsqueda local a través de una descripción con el siguiente pseudocódigo:
 
 ```
-FUNCION ALGORITMO-ESCALADA(problema) returns (estado que es máximo local)
+FUNCION ALGORITMO-ESCALADA(problema) devolver (estado que es máximo local)
 
 	nodo_actual <- CREAR-NODO(problema-estado-inicial)
-	loop do
+    loop do
 		vecino <- (sucesor con mayor valor que nodo_actual)
 		if vecino-valor <= nodo_actual-valor then return nodo_actual
 		nodo_actual <- vecino
 ```
+
+Este algoritmo se a desplazando entre nodos, yendo siempre a un vecino que tenga un valor más alto.
+Cuando encuentra un nodo cuyos vecinos tienen valor más bajo que él se para, ha alcanzado un pico. 
+
+
 
 
 
