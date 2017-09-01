@@ -13,7 +13,7 @@
   - [Búsqueda hacia delante](#busqueda-hacia-delante)
   - [Búsqueda hacia atrás](#busqueda-hacia-atrás)
   - [Heurística para planificación](#heurística-para-planificación)
-	 * [Heurística ![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20%5CDelta_0)](#heurística)
+	 * [Heurística ![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20%5CDelta_0)](#heurística-![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20%5CDelta_0))
 
 
 
