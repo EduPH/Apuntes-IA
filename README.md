@@ -19,3 +19,6 @@ La inteligencia artificial intenta entender y construir agentes inteligentes.
 3. [Capítulo
    3](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%203.md):
    En el que hablamos sobre planificación. 
+4. [Capítulo
+   4](https://github.com/EduPH/Apuntes-IA/blob/master/Capitulo%204.md):
+   En el que hablamos sobre búsqueda local y algoritmos genéticos. 
