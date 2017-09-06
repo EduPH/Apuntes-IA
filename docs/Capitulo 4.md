@@ -39,8 +39,40 @@ FUNCION ALGORITMO-ESCALADA(problema) devolver (estado que es máximo local)
 		nodo_actual <- vecino
 ```
 
-Este algoritmo se a desplazando entre nodos, yendo siempre a un vecino que tenga un valor más alto.
-Cuando encuentra un nodo cuyos vecinos tienen valor más bajo que él se para, ha alcanzado un pico. 
+Este algoritmo se va desplazando entre nodos, yendo siempre a un vecino que tenga un valor más alto.
+Cuando encuentra un nodo cuyos vecinos tienen valor más bajo que él se
+para, ha alcanzado un pico. Se puede apreciar que este algoritmo no
+mantiene en la memoria un árbol de búsqueda, sólamente necesita
+recordar el estado y el valor de la función objetivo. 
+
+Un gran inconveniente de este algoritmo es que no aseguro la solución
+óptima. La manera de sobrellevar este problema suele ser tomar estados
+iniciales aleatorios e iterar el proceso para, posteriormente, tomar
+el mejor de los resultados obtenidos. Además, cabe mencionar que la
+eficiencia depende en gran medida de la función que genera los
+sucesores. 
+
+### Enfriamento simulado
+
+Este algoritmo pretende combinar la búsqueda en escalada y un random
+walk o paseo aleatorio (introducción a procesos estocásticos
+[aquí](https://matesland.wordpress.com/2017/07/06/introduccion-procesos-estocasticos/)),
+obteniendo así un algoritmo completo y eficiente. Veamos su
+descripción en pseudocódigo:
+
+```
+FUNCION ENFRIAMIENTO-SIMULADO(T-INICIAL,FACTOR-DESCENSO, N-ENFRIAMIENTOS,N-ITERACIONES)
+1. Crear las siguientes variables locales:
+   1.1 TEMPERATURA (para almacenar la temperatura actual),
+       inicialmente con valor T-INICIAL.
+   1.2 ACTUAL (para almacenar el estado actual), cuyo valor
+       inicial es GENERA-ESTADO-INICIAL().
+   1.3 VALOR-ACTUAL igual a F-VALORACIÓN(ACTUAL)
+   1.4 MEJOR (para almacenar el mejor estado
+       encontrado hasta el momento), inicialmente ACTUAL.
+   1.5 VALOR-MEJOR (para almacenar el valor de MEJOR),
+       inicialmente igual a VALOR-ACTUAL
+```
 
 
 
