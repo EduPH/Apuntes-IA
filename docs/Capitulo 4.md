@@ -63,6 +63,7 @@ descripción en pseudocódigo:
 ```
 FUNCION ENFRIAMIENTO-SIMULADO(T-INICIAL,FACTOR-DESCENSO, N-ENFRIAMIENTOS,N-ITERACIONES)
 1. Crear las siguientes variables locales:
+
    1.1 TEMPERATURA (para almacenar la temperatura actual),
        inicialmente con valor T-INICIAL.
    1.2 ACTUAL (para almacenar el estado actual), cuyo valor
@@ -73,21 +74,22 @@ FUNCION ENFRIAMIENTO-SIMULADO(T-INICIAL,FACTOR-DESCENSO, N-ENFRIAMIENTOS,N-ITERA
    1.5 VALOR-MEJOR (para almacenar el valor de MEJOR),
        inicialmente igual a VALOR-ACTUAL
 2. Iterar un número de veces igual a N-ENFRIAMIENTOS:
+
    2.1 Iterar un número de veces igual a N-ITERACIONES:
 	   2.1.1 Crear las siguientes variables locales:
-		 2.1.1.1 CANDIDATA, una solución vecina de ACTUAL,
-               generada por GENERA-SUCESOR.
+	   
+		 2.1.1.1 CANDIDATA, una solución vecina de ACTUAL, generada por GENERA-SUCESOR.
 		 2.1.1.2 VALOR-CANDIDATA, el valor de CANDIDATA.
-		 2.1.1.3 INCREMENTO, la diferencia entre VALOR-CANDIDATA y
-               VALOR-ACTUAL
-       2.1.2 Cuando INCREMENTO es negativo, o se acepta
-              probabilísticamente la solución candidata,
-              hacer ACTUAL igual a VECINA
-              y VALOR-ACTUAL igual a VALOR-VECINA.
-       2.1.3 Si VALOR-ACTUAL es mejor que VALOR-MEJOR,
+		 2.1.1.3 INCREMENTO, la diferencia entre VALOR-CANDIDATA y VALOR-ACTUAL
+       
+	   2.1.2 Cuando INCREMENTO es negativo, o se acepta probabilísticamente la solución candidata,
+              hacer ACTUAL igual a VECINA y VALOR-ACTUAL igual a VALOR-VECINA.
+       
+	   2.1.3 Si VALOR-ACTUAL es mejor que VALOR-MEJOR,
               actualizar MEJOR con ACTUAL
               y VALOR-MEJOR con VALOR-ACTUAL.
    2.2  Disminuir TEMPERATURA usando FACTOR-DESCENSO
+
 3. Devolver MEJOR y VALOR-MEJOR
 ```
 
@@ -95,7 +97,61 @@ Está inspirado en el proceso físico-químico de enfriamiento de
 metales. De manera intuitiva, se aceptan probabilísticamente estados
 "peores", dicha probabilidad de estos estados varía según el
 incremento en la función de valoración. Con esto se consigue salir de
-óptimos locales pero sin salir del óptimo local. 
+óptimos locales pero sin salir del óptimo global. 
+
+### Algoritmos genéticos
+
+En estos algoritmos los sucesores son producto de la combinación de
+dos estados. Se comienza con la **población** que es un conjunto de
+*k* estados generados aleatoriamente, siendo cada **individuo**
+representado por una cadena en un alfabeto finito. 
+
+No existe un solo algoritmo genético. En estos algoritmos la función
+de valoración se suele denominar **fitness**. 
+
+Veamos su descripción en pseudocódigo:
+```
+INICIAR población
+EVALUAR cada individuo de la población
+Repetir hasta CONDICIÓN_DE_TERMINACIÓN
+   SELECCIONAR padres
+   COMBINAR pares de padres
+   MUTAR hijos resultantes
+   EVALUAR nuevos individuos
+   SELECCIONAR individuos para la siguiente generación
+Devolver el mejor de la última generación
+```
+Ahora comentemos con más detenimiento las distintas fases del
+algoritmo. 
+
++ *Población inicial*: generalmente **N** individuos completamente
+  aleatorios. 
+
++ *Combinación de individuos*: Se trata de la combinación de la
+  información de los padres para obtener nuevos hijos a partir de unos
+  operadores. 
+	  - Hay distintas posibilidades de cruce: en un punto, multipunto,
+		  uniforme...
+
++ *Mutación*: Se trata de con una determinada probabilidad cambiar
+  algunos genes, siendo aleatorio también el gen que es
+  modificado. Los genes no son más que el material genético básico de
+  la representación de los individuos. 
+
++  *Terminación del algoritmo*: puede determinarse por cantidad de
+   generaciones, cuando se completen un número dado de generaciones
+   sin mejorar o hasta un valor prefijado de la función de
+   valoración. 
+  
+ Finalmente, es importante el sistema de selección de los individuos
+de la población. Ésta selección debe favorecer a los mejores, permitir
+la diversidad y tener cierta aleatoriedad. 
+
+Algunos ejemplos son: proporcional a su valoración, torneo y
+élite+aleatoriedad. 
+
+**Selección proporcional a su valoración**: 
+
 
 
 
