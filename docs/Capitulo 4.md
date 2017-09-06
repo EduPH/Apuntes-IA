@@ -72,6 +72,23 @@ FUNCION ENFRIAMIENTO-SIMULADO(T-INICIAL,FACTOR-DESCENSO, N-ENFRIAMIENTOS,N-ITERA
        encontrado hasta el momento), inicialmente ACTUAL.
    1.5 VALOR-MEJOR (para almacenar el valor de MEJOR),
        inicialmente igual a VALOR-ACTUAL
+2. Iterar un número de veces igual a N-ENFRIAMIENTOS:
+   2.1 Iterar un número de veces igual a N-ITERACIONES:
+	   2.1.1 Crear las siguientes variables locales:
+		2.1.1.1 CANDIDATA, una solución vecina de ACTUAL,
+               generada por GENERA-SUCESOR.
+		2.1.1.2 VALOR-CANDIDATA, el valor de CANDIDATA.
+		2.1.1.3 INCREMENTO, la diferencia entre VALOR-CANDIDATA y
+               VALOR-ACTUAL
+       2.1.2 Cuando INCREMENTO es negativo, o se acepta
+              probabilísticamente la solución candidata,
+              hacer ACTUAL igual a VECINA
+              y VALOR-ACTUAL igual a VALOR-VECINA.
+       2.1.3 Si VALOR-ACTUAL es mejor que VALOR-MEJOR,
+              actualizar MEJOR con ACTUAL
+              y VALOR-MEJOR con VALOR-ACTUAL.
+   2.2  Disminuir TEMPERATURA usando FACTOR-DESCENSO
+3. Devolver MEJOR y VALOR-MEJOR
 ```
 
 
