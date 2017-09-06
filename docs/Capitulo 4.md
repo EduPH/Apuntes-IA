@@ -2,6 +2,17 @@
 
 [Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/docs/Capitulo%203.md)
 
+
+### Tabla de contenidos: 
+
++ [Búsqueda local](#busqueda-local)
+  - [Búsqueda en escalada](#busqueda-en-escalada)
+  - [Enfriamiento simulado](#enfriamiento-simulado)
+  - [Algoritmos genéticos](#algoritmos-geneticos)
+
+
+
+
 En este capítulo relajaremos las asumpciones que nos simplificaban los problemas, 
 consiguiendo así un acercamiento a los problemas del mundo real. 
 
@@ -150,8 +161,22 @@ la diversidad y tener cierta aleatoriedad.
 Algunos ejemplos son: proporcional a su valoración, torneo y
 élite+aleatoriedad. 
 
-**Selección proporcional a su valoración**: 
+**Selección proporcional a su valoración**: Se pretende seleccionar
+aleatoriamente los individuos de manera que cada uno tenga una
+probabilidad de ser seleccionado acorde a su valoración. Así, la
+probabilidad de que cada individuo sea seleccionado es 
+![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20P%28i%29%3D%20%5Cfrac%7BF%28i%29%7D%7B%5Csum_%7Bj%3D1%7D%5En%20F%28j%29%7D).
 
+
+*Nota*: este método sólo se puede emplear para problemas de
+maximización. 
+
+**Selección por torneo**: Para cada selección se extraen **k**
+individuos y se selecciona el mejor. Cuanto mayor sea **k**, mayor es
+la *presión evolutiva*. 
+
+**Selección elitista**: se escoge un porcentaje de los mejores y el
+resto se toma de manera aleatoria entre los restantes. 
 
 
 
