@@ -75,10 +75,10 @@ FUNCION ENFRIAMIENTO-SIMULADO(T-INICIAL,FACTOR-DESCENSO, N-ENFRIAMIENTOS,N-ITERA
 2. Iterar un número de veces igual a N-ENFRIAMIENTOS:
    2.1 Iterar un número de veces igual a N-ITERACIONES:
 	   2.1.1 Crear las siguientes variables locales:
-		2.1.1.1 CANDIDATA, una solución vecina de ACTUAL,
+		 2.1.1.1 CANDIDATA, una solución vecina de ACTUAL,
                generada por GENERA-SUCESOR.
-		2.1.1.2 VALOR-CANDIDATA, el valor de CANDIDATA.
-		2.1.1.3 INCREMENTO, la diferencia entre VALOR-CANDIDATA y
+		 2.1.1.2 VALOR-CANDIDATA, el valor de CANDIDATA.
+		 2.1.1.3 INCREMENTO, la diferencia entre VALOR-CANDIDATA y
                VALOR-ACTUAL
        2.1.2 Cuando INCREMENTO es negativo, o se acepta
               probabilísticamente la solución candidata,
@@ -91,6 +91,11 @@ FUNCION ENFRIAMIENTO-SIMULADO(T-INICIAL,FACTOR-DESCENSO, N-ENFRIAMIENTOS,N-ITERA
 3. Devolver MEJOR y VALOR-MEJOR
 ```
 
+Está inspirado en el proceso físico-químico de enfriamiento de
+metales. De manera intuitiva, se aceptan probabilísticamente estados
+"peores", dicha probabilidad de estos estados varía según el
+incremento en la función de valoración. Con esto se consigue salir de
+óptimos locales pero sin salir del óptimo local. 
 
 
 
