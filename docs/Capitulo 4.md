@@ -11,6 +11,7 @@
   - [Algoritmos genéticos](#algoritmos-geneticos)
 
 
+Las prácticas en python relativas a este capítulo se encuentran [aquí](https://github.com/EduPH/IA-Practicas/blob/master/practica-03.py).
 
 
 En este capítulo relajaremos las asumpciones que nos simplificaban los problemas, 
@@ -179,9 +180,7 @@ la *presión evolutiva*.
 resto se toma de manera aleatoria entre los restantes. 
 
 
-
-
-
+[Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/docs/Capitulo%203.md)
 
 
 
