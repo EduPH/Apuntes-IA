@@ -5,10 +5,10 @@
 
 ### Tabla de contenidos: 
 
-+ [Búsqueda local](#busqueda-local)
-  - [Búsqueda en escalada](#busqueda-en-escalada)
++ [Búsqueda local](#búsqueda-local)
+  - [Búsqueda en escalada](#búsqueda-en-escalada)
   - [Enfriamiento simulado](#enfriamiento-simulado)
-  - [Algoritmos genéticos](#algoritmos-geneticos)
+  - [Algoritmos genéticos](#algoritmos-genéticos)
 
 
 Las prácticas en python relativas a este capítulo se encuentran [aquí](https://github.com/EduPH/IA-Practicas/blob/master/practica-03.py).

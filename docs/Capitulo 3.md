@@ -10,8 +10,8 @@
 
 + [PDDL](#PDDL)
   - [Torres de Hanói](#ejemplo-de-las-torres-de-hanói)
-  - [Búsqueda hacia delante](#busqueda-hacia-delante)
-  - [Búsqueda hacia atrás](#busqueda-hacia-atrás)
+  - [Búsqueda hacia delante](#búsqueda-hacia-delante)
+  - [Búsqueda hacia atrás](#búsqueda-hacia-atrás)
   - [Heurística para planificación](#heurística-para-planificación)
 	 * [Heurística ![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20%5CDelta_0)](#heurística)
 
