@@ -156,7 +156,7 @@ algoritmo.
    valoración. 
   
  Finalmente, es importante el sistema de selección de los individuos
-de la población. Ésta selección debe favorecer a los mejores, permitir
+de la población. Esta selección debe favorecer a los mejores, permitir
 la diversidad y tener cierta aleatoriedad. 
 
 Algunos ejemplos son: proporcional a su valoración, torneo y
