@@ -1,6 +1,7 @@
 # Capítulo 4: Búsqueda local y algoritmos genéticos
 
-[Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/docs/Capitulo%203.md)
+[Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/docs/Capitulo%203.md) [Siguiente](https://github.com/EduPH/Apuntes-IA/blob/master/docs/Capitulo%205.md)
+
 
 
 ### Tabla de contenidos: 
@@ -180,7 +181,7 @@ la *presión evolutiva*.
 resto se toma de manera aleatoria entre los restantes. 
 
 
-[Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/docs/Capitulo%203.md)
+[Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/docs/Capitulo%203.md)   [Siguiente](https://github.com/EduPH/Apuntes-IA/blob/master/docs/Capitulo%205.md)
 
 
 
