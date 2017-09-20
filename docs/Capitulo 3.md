@@ -304,7 +304,7 @@ Así, se están relajando las condiciones del problema, suponiendo que
 no hay precondiciones ni efectos negativas. 
 
 
-[Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/docs/Capitulo%202.md)  [Siguiente](https://github.com/EduPH/Apuntes-IA/blob/master/docs/Capitulo%203.md)
+[Anterior](https://github.com/EduPH/Apuntes-IA/blob/master/docs/Capitulo%202.md)  [Siguiente](https://github.com/EduPH/Apuntes-IA/blob/master/docs/Capitulo%204.md)
 
 
 
