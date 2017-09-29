@@ -27,10 +27,11 @@ optimizar ciertas acciones, se adaptará a las circunstancias y objetivos del ag
 
 
 Lo que es racional depende de cuatro elementos:
-	+ La medida de actuación que define el criterio de éxito.
-	+ El conocimiento (a priori) del agente sobre el ambiente.
-	+ Las acciones que el agente puede realizar.
-	+ La percepción secuencial del agente hasta el momento.
+
++ La medida de actuación que define el criterio de éxito.
++ El conocimiento (a priori) del agente sobre el ambiente.
++ Las acciones que el agente puede realizar.
++ La percepción secuencial del agente hasta el momento.
 
 Con esto podemos definir lo que es un **agente racional**:
 > Para cada posible percepción secuencial, un agente racional debe elegir una acción que maximice su medida de actuación, basándose en la evidencia dada por su percepción y cualquier conocimiento que el agente tenga.
