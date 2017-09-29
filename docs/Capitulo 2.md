@@ -377,7 +377,7 @@ Segundo sucesor:
 2 | 8 | 3
 --- | --- | ---
 1 | 6 | 4
- | 7 | 5
+0 | 7 | 5
 
 
 Tercer sucesor:
