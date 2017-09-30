@@ -9,7 +9,6 @@ agent*, es decir, agentes que resuelven problemas. Éstos usan
 representaciones atómicas, cada estado del mundo ambiente se considera
 indivisible, sin estructura interna.
 
-![image](https://raw.githubusercontent.com/EduPH/Apuntes-IA/master/formulas/render.png)
 
 ## Tabla de contenidos
 
@@ -494,7 +493,7 @@ profundidad. Además, consideremos que el número de acciones por nodo
 es b, apareciendo, por lo tanto, b nodos por expansión. 
 
 
-![equation](http://latex.codecogs.com/gif.latex?%5Cfn_cm%20%5Clarge%20b&plus;b%5E2&plus;b%5E3&plus;%20...%20&plus;%20b%5Ed%20%3D%20O%28b%5Ed%29)  
+![equation](https://raw.githubusercontent.com/EduPH/Apuntes-IA/master/formulas/formula1.png)
 
 
 es decir, hablamos de una complejidad exponencial. Además, visionando
