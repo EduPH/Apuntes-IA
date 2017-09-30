@@ -556,7 +556,7 @@ cota de profundidad, la va aumentando gradualmente.
 La forma general de abordar un algoritmo de este tipo es a través de
 la llamada **mejor búsqueda primero** o **búsqueda con prioridad**, que es una variante del
 algoritmo de búsqueda genérico en árboles que antes se introdujo, pero
-empleando una *función de evaluación* ![formula](http://latex.codecogs.com/gif.latex?%5Clarge%20f%28n%29) que está definida como una
+empleando una *función de evaluación* ![formula](https://raw.githubusercontent.com/EduPH/Apuntes-IA/master/formulas/formula3.png) que está definida como una
 estimación de costes. Así, el nodo con una evaluación menor es el que
 se expande primero y la elección de dicha función de evaluación
 establece la estrategia del algoritmo. 
