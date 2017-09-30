@@ -9,6 +9,7 @@ agent*, es decir, agentes que resuelven problemas. Éstos usan
 representaciones atómicas, cada estado del mundo ambiente se considera
 indivisible, sin estructura interna.
 
+![image](https://raw.githubusercontent.com/EduPH/Apuntes-IA/master/formulas/render.png)
 
 ## Tabla de contenidos
 
