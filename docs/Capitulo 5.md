@@ -39,6 +39,7 @@ Según el dominio del que tome sus valores una variable aleatoria, la denotaremo
 Vistas las variables aleatorias, el conocimiento será representado a través de éstas y de conectivas lógicas, configurando así las **proposiciones**. Antes hemos empleado una proposición muy sencilla, *que salga un 1 al lanzar el dado*. Y para determinar el 0.1 hemos adoptado la aproximación frecuentista, es decir, número de casos favorables entre número de casos totales. 
 
 
+*Definición*: Una **función de probabilidad** sobre un espacio muestral ![formula]()
 
 
 
