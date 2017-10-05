@@ -30,7 +30,15 @@ La probabilidad representará nuestro grado de creencia de que ocurra algo. Por 
 
 ![formula](https://raw.githubusercontent.com/EduPH/Apuntes-IA/master/formulas/CodeCogsEqn.gif)
 
-Es decir, decimos que la probabilidad de que la variable aleatoria x tome el valor 1 en su dominio es de 0.1 porque nuestro grado de creencia de que salga 1 es de esa probabilidad. 
+Es decir, decimos que la probabilidad de que la variable aleatoria x tome el valor 1 en su dominio es de 0.1 porque nuestro grado de creencia de que salga 1 es de esa probabilidad.
+
+> La variable aleatoria formaliza las magnitudes numéricas asociadas a los resultados de un experimento aleatorio. 
+
+Según el dominio del que tome sus valores una variable aleatoria, la denotaremos por variable aleatoria booleana, discreta o continua. Nosotros usaremos sobre todo variables aleatorias discretas (como el caso del dado). 
+
+Vistas las variables aleatorias, el conocimiento será representado a través de éstas y de conectivas lógicas, configurando así las **proposiciones**. Antes hemos empleado una proposición muy sencilla, *que salga un 1 al lanzar el dado*. Y para determinar el 0.1 hemos adoptado la aproximación frecuentista, es decir, número de casos favorables entre número de casos totales. 
+
+
 
 
 
