@@ -46,7 +46,7 @@ Vistas las variables aleatorias, el conocimiento será representado a través de
 que satisface las siguientes propiedades:
 
 + ![formula](https://raw.githubusercontent.com/EduPH/Apuntes-IA/master/formulas/CodeCogsEqn-4.gif) para toda proposición a.
-+ ![formula](https://raw.githubusercontent.com/EduPH/Apuntes-IA/master/formulas/CodeCogsEqn-4.gif) donde Prop denotará el conjunto de las proposiciones. 
++ ![formula](https://raw.githubusercontent.com/EduPH/Apuntes-IA/master/formulas/CodeCogsEqn-5.gif) donde Prop denotará el conjunto de las proposiciones. 
 + La probabilidad de una tautología es 1 y la de una proposición insatisfacible 0. 
 
 
