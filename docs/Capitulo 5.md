@@ -24,6 +24,10 @@ La lógica de primer orden, reglas, redes bayesianas... constituyen algunos form
 
 En muchas ocasiones realizar deducciones categóricas a partir del conocimiento que tenemos, ya sea por el trabajo excesivo que representa ser exhaustivo, porque no se tiene suficiente información, o no se puede llevar a cabo de manera práctica, no nos sirve . Solventaremos estos obstáculos aquí expuestos mediante una nueva forma de expresar el conocimiento, el grado de creencia. Para esta expresión del *conocimiento incierto* se emplea bagaje propio de la teoría de la probabilidad (TP). 
 
+## Representación del conocimiento basado en la probabilidad
+
+
+
 
 
 
