@@ -26,7 +26,9 @@ En muchas ocasiones realizar deducciones categóricas a partir del conocimiento 
 
 ## Representación del conocimiento basado en la probabilidad
 
+La probabilidad representará nuestro grado de creencia de que ocurra algo. Por ejemplo, si tenemos un dado, 
 
+![formula](https://raw.githubusercontent.com/EduPH/Apuntes-IA/master/formulas/CodeCogsEqn.gif)
 
 
 
