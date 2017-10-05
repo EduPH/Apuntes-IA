@@ -39,7 +39,16 @@ Según el dominio del que tome sus valores una variable aleatoria, la denotaremo
 Vistas las variables aleatorias, el conocimiento será representado a través de éstas y de conectivas lógicas, configurando así las **proposiciones**. Antes hemos empleado una proposición muy sencilla, *que salga un 1 al lanzar el dado*. Y para determinar el 0.1 hemos adoptado la aproximación frecuentista, es decir, número de casos favorables entre número de casos totales. 
 
 
-*Definición*: Una **función de probabilidad** sobre un espacio muestral ![formula]()
+*Definición*: Una **función de probabilidad** sobre un espacio muestral ![formula](https://raw.githubusercontent.com/EduPH/Apuntes-IA/master/formulas/CodeCogsEqn-2.gif), es una función:
+
+![formula](https://raw.githubusercontent.com/EduPH/Apuntes-IA/master/formulas/CodeCogsEqn-3.gif)
+
+que satisface las siguientes propiedades:
+
++ ![formula](https://raw.githubusercontent.com/EduPH/Apuntes-IA/master/formulas/CodeCogsEqn-4.gif) para toda proposición a.
++ ![formula](https://raw.githubusercontent.com/EduPH/Apuntes-IA/master/formulas/CodeCogsEqn-4.gif) donde Prop denotará el conjunto de las proposiciones. 
++ La probabilidad de una tautología es 1 y la de una proposición insatisfacible 0. 
+
 
 
 
