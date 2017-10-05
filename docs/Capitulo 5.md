@@ -50,7 +50,11 @@ que satisface las siguientes propiedades:
 + La probabilidad de una tautología es 1 y la de una proposición insatisfacible 0. 
 
 
+De esta definición y las tres propiedades axiomáticas a partir de la que hemos definido la función de probabilidad se infieren las siguientes propiedades:
 
++ ![formula](https://raw.githubusercontent.com/EduPH/Apuntes-IA/master/formulas/CodeCogsEqn-6.gif)
++ ![formula](https://raw.githubusercontent.com/EduPH/Apuntes-IA/master/formulas/CodeCogsEqn-7.gif) donde a y b son disjuntos.
++ ![formula](https://raw.githubusercontent.com/EduPH/Apuntes-IA/master/formulas/CodeCogsEqn-8.gif) donde ![formula](https://raw.githubusercontent.com/EduPH/Apuntes-IA/master/formulas/CodeCogsEqn-9.gif) son los posibles valores de la variable aleatoria X.
 
 
 
