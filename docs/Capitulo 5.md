@@ -26,9 +26,11 @@ En muchas ocasiones realizar deducciones categóricas a partir del conocimiento 
 
 ## Representación del conocimiento basado en la probabilidad
 
-La probabilidad representará nuestro grado de creencia de que ocurra algo. Por ejemplo, si tenemos un dado, 
+La probabilidad representará nuestro grado de creencia de que ocurra algo. Por ejemplo, si tenemos un dado de 10 caras. Si todas las caras tienen la misma probabilidad de salir, entonces decimos que nuestro grado de creencia de que salga, por ejemplo, el número 1 será de 0.1. Sea la **variable aleatoria** x que es *número que sale al lanzar el dado*, se tiene lo siguiente:
 
 ![formula](https://raw.githubusercontent.com/EduPH/Apuntes-IA/master/formulas/CodeCogsEqn.gif)
+
+Es decir, decimos que la probabilidad de que la variable aleatoria x tome el valor 1 en su dominio es de 0.1 porque nuestro grado de creencia de que salga 1 es de esa probabilidad. 
 
 
 
